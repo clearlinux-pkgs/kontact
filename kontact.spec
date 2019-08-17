@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : kontact
-Version  : 18.12.2
-Release  : 1
-URL      : https://download.kde.org/stable/applications/18.12.2/src/kontact-18.12.2.tar.xz
-Source0  : https://download.kde.org/stable/applications/18.12.2/src/kontact-18.12.2.tar.xz
-Source1 : https://download.kde.org/stable/applications/18.12.2/src/kontact-18.12.2.tar.xz.sig
+Version  : 19.08.0
+Release  : 2
+URL      : https://download.kde.org/stable/applications/19.08.0/src/kontact-19.08.0.tar.xz
+Source0  : https://download.kde.org/stable/applications/19.08.0/src/kontact-19.08.0.tar.xz
+Source1 : https://download.kde.org/stable/applications/19.08.0/src/kontact-19.08.0.tar.xz.sig
 Summary  : KDE Personal Information Manager
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0 LGPL-2.1
@@ -85,14 +85,14 @@ locales components for the kontact package.
 
 
 %prep
-%setup -q -n kontact-18.12.2
+%setup -q -n kontact-19.08.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565960112
+export SOURCE_DATE_EPOCH=1566053523
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -109,7 +109,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1565960112
+export SOURCE_DATE_EPOCH=1566053523
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kontact
 cp COPYING %{buildroot}/usr/share/package-licenses/kontact/COPYING
@@ -131,6 +131,7 @@ popd
 %defattr(-,root,root,-)
 /usr/share/applications/org.kde.kontact.desktop
 /usr/share/config.kcfg/kontact.kcfg
+/usr/share/dbus-1/services/org.kde.kontact.service
 /usr/share/icons/hicolor/128x128/apps/kontact.png
 /usr/share/icons/hicolor/16x16/apps/kontact.png
 /usr/share/icons/hicolor/22x22/apps/kontact.png
@@ -144,8 +145,8 @@ popd
 /usr/share/messageviewer/about/default/introduction_kontact.html
 /usr/share/messageviewer/about/default/loading_kontact.html
 /usr/share/metainfo/org.kde.kontact.appdata.xml
-/usr/share/xdg/kontact.categories
-/usr/share/xdg/kontact.renamecategories
+/usr/share/qlogging-categories5/kontact.categories
+/usr/share/qlogging-categories5/kontact.renamecategories
 
 %files doc
 %defattr(0644,root,root,0755)
@@ -194,7 +195,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkontactprivate.so.5
-/usr/lib64/libkontactprivate.so.5.10.2
+/usr/lib64/libkontactprivate.so.5.12.0
 /usr/lib64/qt5/plugins/kcm_kontact.so
 
 %files license
