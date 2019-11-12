@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : kontact
-Version  : 19.08.2
-Release  : 4
-URL      : https://download.kde.org/stable/applications/19.08.2/src/kontact-19.08.2.tar.xz
-Source0  : https://download.kde.org/stable/applications/19.08.2/src/kontact-19.08.2.tar.xz
-Source1 : https://download.kde.org/stable/applications/19.08.2/src/kontact-19.08.2.tar.xz.sig
+Version  : 19.08.3
+Release  : 5
+URL      : https://download.kde.org/stable/applications/19.08.3/src/kontact-19.08.3.tar.xz
+Source0  : https://download.kde.org/stable/applications/19.08.3/src/kontact-19.08.3.tar.xz
+Source1 : https://download.kde.org/stable/applications/19.08.3/src/kontact-19.08.3.tar.xz.sig
 Summary  : KDE Personal Information Manager
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0 LGPL-2.1
@@ -85,14 +85,14 @@ locales components for the kontact package.
 
 
 %prep
-%setup -q -n kontact-19.08.2
+%setup -q -n kontact-19.08.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570788273
+export SOURCE_DATE_EPOCH=1573531579
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -109,12 +109,12 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1570788273
+export SOURCE_DATE_EPOCH=1573531579
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kontact
-cp COPYING %{buildroot}/usr/share/package-licenses/kontact/COPYING
-cp COPYING.DOC %{buildroot}/usr/share/package-licenses/kontact/COPYING.DOC
-cp COPYING.LIB %{buildroot}/usr/share/package-licenses/kontact/COPYING.LIB
+cp %{_builddir}/kontact-19.08.3/COPYING %{buildroot}/usr/share/package-licenses/kontact/7c203dee3a03037da436df03c4b25b659c073976
+cp %{_builddir}/kontact-19.08.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/kontact/1bd373e4851a93027ba70064bd7dbdc6827147e1
+cp %{_builddir}/kontact-19.08.3/COPYING.LIB %{buildroot}/usr/share/package-licenses/kontact/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -195,14 +195,14 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkontactprivate.so.5
-/usr/lib64/libkontactprivate.so.5.12.2
+/usr/lib64/libkontactprivate.so.5.12.3
 /usr/lib64/qt5/plugins/kcm_kontact.so
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/kontact/COPYING
-/usr/share/package-licenses/kontact/COPYING.DOC
-/usr/share/package-licenses/kontact/COPYING.LIB
+/usr/share/package-licenses/kontact/1bd373e4851a93027ba70064bd7dbdc6827147e1
+/usr/share/package-licenses/kontact/7c203dee3a03037da436df03c4b25b659c073976
+/usr/share/package-licenses/kontact/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 
 %files locales -f kontact.lang
 %defattr(-,root,root,-)
