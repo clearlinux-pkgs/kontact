@@ -2,6 +2,5 @@
 # picked up automatically. One name per line, no whitespace.
 akonadi-contacts-dev
 kcontacts-dev
-kdepim-apps-libs-dev
 kmime-dev
 qtwebengine-dev

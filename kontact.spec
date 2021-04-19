@@ -6,7 +6,7 @@
 #
 Name     : kontact
 Version  : 20.12.3
-Release  : 19
+Release  : 20
 URL      : https://download.kde.org/stable/release-service/20.12.3/src/kontact-20.12.3.tar.xz
 Source0  : https://download.kde.org/stable/release-service/20.12.3/src/kontact-20.12.3.tar.xz
 Source1  : https://download.kde.org/stable/release-service/20.12.3/src/kontact-20.12.3.tar.xz.sig
@@ -28,7 +28,6 @@ BuildRequires : kcmutils-dev
 BuildRequires : kcontacts-dev
 BuildRequires : kcrash-dev
 BuildRequires : kdbusaddons-dev
-BuildRequires : kdepim-apps-libs-dev
 BuildRequires : kdoctools-dev
 BuildRequires : kiconthemes-dev
 BuildRequires : kmime-dev
@@ -104,7 +103,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618687995
+export SOURCE_DATE_EPOCH=1618859774
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -120,7 +119,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618687995
+export SOURCE_DATE_EPOCH=1618859774
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kontact
 cp %{_builddir}/kontact-20.12.3/LICENSES/GFDL-1.2-or-later.txt %{buildroot}/usr/share/package-licenses/kontact/7697008f58568e61e7598e796eafc2a997503fde
