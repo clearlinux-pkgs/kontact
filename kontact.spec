@@ -6,7 +6,7 @@
 #
 Name     : kontact
 Version  : 21.08.2
-Release  : 24
+Release  : 25
 URL      : https://download.kde.org/stable/release-service/21.08.2/src/kontact-21.08.2.tar.xz
 Source0  : https://download.kde.org/stable/release-service/21.08.2/src/kontact-21.08.2.tar.xz
 Source1  : https://download.kde.org/stable/release-service/21.08.2/src/kontact-21.08.2.tar.xz.sig
