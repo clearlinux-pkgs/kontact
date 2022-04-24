@@ -1,5 +1,5 @@
 PKG_NAME := kontact
-URL = https://download.kde.org/stable/release-service/21.12.3/src/kontact-21.12.3.tar.xz
+URL = https://download.kde.org/stable/release-service/22.04.0/src/kontact-22.04.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
