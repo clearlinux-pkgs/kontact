@@ -7,7 +7,7 @@
 #
 Name     : kontact
 Version  : 23.04.3
-Release  : 55
+Release  : 56
 URL      : https://download.kde.org/stable/release-service/23.04.3/src/kontact-23.04.3.tar.xz
 Source0  : https://download.kde.org/stable/release-service/23.04.3/src/kontact-23.04.3.tar.xz
 Source1  : https://download.kde.org/stable/release-service/23.04.3/src/kontact-23.04.3.tar.xz.sig
