@@ -3,6 +3,7 @@
 akonadi-contacts-dev
 kcontacts-dev
 kmime-dev
-qtwebengine-dev
+qt6webengine-dev
 kontactinterface-dev
 ktextaddons-dev
+grantleetheme-dev
