@@ -9,7 +9,7 @@
 #
 Name     : kontact
 Version  : 24.12.3
-Release  : 104
+Release  : 105
 URL      : https://download.kde.org/stable/release-service/24.12.3/src/kontact-24.12.3.tar.xz
 Source0  : https://download.kde.org/stable/release-service/24.12.3/src/kontact-24.12.3.tar.xz
 Source1  : https://download.kde.org/stable/release-service/24.12.3/src/kontact-24.12.3.tar.xz.sig
